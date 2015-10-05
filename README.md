@@ -1,1 +1,1 @@
-Dice rolling application that it rolls two dice instead of just one.
+Javascript dice rolling application that rolls two dice.
