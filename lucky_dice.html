@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Chapter 2, Exercise 3</title>
+    <style> 
+      .window {
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        clear: both;
+        background-color: red;
+        color: white;
+        border:3px solid black;
+      }
+      h1 {
+        padding: 50px;
+      }
+      .form_display {
+        width: 50%;
+        margin: 0 auto;
+      }
+    </style>
+    <script>
+      /*jslint browser:true */
+      function rollDice() {
+        "use strict";
+        var stat = document.getElementById("stat");
+        var di_1 = (1 + Math.floor(6 * Math.random()));
+        var di_2 = (1 + Math.floor(6 * Math.random()));
+        stat.innerHTML = "You rolled " + di_1 + " and " + di_2 + ".";
+        if (di_1 === di_2) {
+            stat.innerHTML += " **DOUBLES** Great job!!!";
+        }
+        if (di_1 === 1 && di_2 === 1) {
+            stat.innerHTML += " **SNAKE EYES** ";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="window">
+        <h1>Welcome to Lucky Dice!</h1>
+        <img src="dice.gif" style="width:220px;margin:auto;display:block;padding:-30px;"/>
+        <div class="form_display">
+          <br />
+          <button onclick="rollDice()">Roll Dice</button>
+          <h3 id="stat" style="clear:left;"></h3>
+        </div>
+      </div>
+    </div>
+   <footer style="width: 20%;margin:0 auto;">&copy; Kevin Austin 2015</footer>
+  </body>
+</html>
